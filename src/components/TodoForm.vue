@@ -23,4 +23,35 @@ function addItemAndClear(item) {
   </form>
 </template>
 
-<style scoped></style>
+<style scoped>
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+input {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    height: 20px;
+    width: 50%;
+}
+button {
+    margin-left: 30px;
+    background-color: #39D106;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 800;
+    color: white;
+}
+.alert-div {
+    min-height: 25px;
+}
+.alert {
+    color: #D1495B;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+</style>

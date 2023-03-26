@@ -5,5 +5,3 @@ import TodoApp from "@/components/TodoApp.vue";
 <template>
   <todo-app />
 </template>
-
-<style scoped></style>
