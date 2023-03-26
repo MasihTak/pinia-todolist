@@ -8,7 +8,7 @@ const store = useTodoListStore();
 const { todoList } = storeToRefs(store);
 
 // destructuring action method doesn't require using storeToRefs:
-const { toggleCompleted } = store;
+const { toggleCompleted, deleteTodo } = store;
 </script>
 
 <template>
@@ -16,17 +16,17 @@ const { toggleCompleted } = store;
     <div class="item">
       <span :class="{ completed: todo.completed }">{{ todo.item }}</span>
       <span @click.stop="toggleCompleted(todo.id)">&#10004;</span>
+      <span @click="deleteTodo(todo.id)">&#10060;</span>
     </div>
   </div>
 </template>
 
 <style scoped>
 .item span:first-of-type {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .completed {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
-
 </style>
